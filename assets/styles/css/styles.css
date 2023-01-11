@@ -58,7 +58,7 @@ button {
     width: 90%;
 }
 
-.goodError, .evilError {
+.good_error, .evil_error {
     display: none;
     color: red;
 }

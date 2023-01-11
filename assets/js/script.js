@@ -48,6 +48,9 @@ const evilQuotesEnd = [
 
 const goodQuotesNumberInput = document.getElementById("goodQuotesNumberInput");
 const goodError = document.getElementById("goodError");
+// const evilQuotesNumberInput = document.getElementById("evilQuotesNumberInput");
+// const evilError = document.getElementById("evilError");
+
 const regexQuoteNumber = /^[1-5]{1}$/;
 
 //  ========================= AFFICHAGE DES CITATIONS ========================= //
