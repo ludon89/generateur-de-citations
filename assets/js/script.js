@@ -48,12 +48,12 @@ const evilQuotesEnd = [
 
 const goodQuotesNumberInput = document.getElementById("goodQuotesNumberInput");
 const goodError = document.getElementById("goodError");
-// const evilQuotesNumberInput = document.getElementById("evilQuotesNumberInput");
-// const evilError = document.getElementById("evilError");
+const evilQuotesNumberInput = document.getElementById("evilQuotesNumberInput");
+const evilError = document.getElementById("evilError");
 
 const regexQuoteNumber = /^[1-5]{1}$/;
 
-//  ========================= AFFICHAGE DES CITATIONS ========================= //
+//  ========================= AFFICHAGE DES CITATIONS GOOD ROBOT ========================= //
 
 const goodQuotesBtn = document.getElementById("goodQuotesBtn");
 const goodQuotesDiv = document.getElementById("goodQuotesDiv");
@@ -83,11 +83,44 @@ const goodQuotesDiv = document.getElementById("goodQuotesDiv");
 
 goodQuotesBtn.addEventListener("click", goodQuotesPrint);
 
+//  ========================= AFFICHAGE DES CITATIONS EVIL ROBOT ========================= //
+
+const evilQuotesBtn = document.getElementById("evilQuotesBtn");
+const evilQuotesDiv = document.getElementById("evilQuotesDiv");
+
+function evilQuotesPrint(e) {
+	evilQuotesDiv.innerHTML = "";
+	if (regexQuoteNumber.test(evilQuotesNumberInput.value.trim()) == false) {
+		e.preventDefault();
+		evilError.style.display = "block";
+	} else {
+		for (let i = 0; i < evilQuotesNumberInput.value; i++) {
+		const rndIndex1 = Math.floor(Math.random() * evilQuotesStart.length);
+		const rndIndex2 = Math.floor(Math.random() * evilQuotesStart.length);
+		const rndIndex3 = Math.floor(Math.random() * evilQuotesStart.length);
+		const evilPara = document.createElement("p");
+		evilPara.textContent =
+			evilQuotesStart[rndIndex1] +
+			" " +
+			evilQuotesMiddle[rndIndex2] +
+			", " +
+			evilQuotesEnd[rndIndex3] +
+			".";
+		evilQuotesDiv.appendChild(evilPara);
+		}
+	}
+	}
+
+evilQuotesBtn.addEventListener("click", evilQuotesPrint);
+
 // ========================== EFFACEMENT MESSAGE D'ERREUR ONINPUT ========================= //
 
 goodQuotesNumberInput.oninput = function () {
 	goodError.style.display = "";
-	// console.log("test");
+}
+
+evilQuotesNumberInput.oninput = function () {
+	evilError.style.display = "";
 }
 
 //  ========================= BOUTON RESET ========================= //
@@ -96,5 +129,8 @@ const btn_Reset = document.getElementById("btn_Reset");
 btn_Reset.onclick = function () {
 	goodQuotesDiv.innerHTML = "";
 	goodError.style.display = "";
+	evilQuotesDiv.innerHTML = "";
+	evilError.style.display = "";
+	goodQuotesNumberInput.value = "";
+	evilQuotesNumberInput.value = "";
 }
-
