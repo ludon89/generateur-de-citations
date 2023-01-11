@@ -10,8 +10,8 @@
 <!-- ========================= Bootstrap Reboot ========================= -->
     <link rel="stylesheet" href="assets/styles/bootstrap/bootstrap-reboot.min.css">
 
-<!-- ========================= Font Awesome ========================= -->
-    <!-- <link rel="stylesheet" href="assets/styles/fontawesome/css/all.min.css"> -->
+<!-- ========================= Google Fonts ========================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 <!-- ========================= CSS ========================= -->
     <link rel="stylesheet" href="assets/styles/css/styles.css">
@@ -23,34 +23,34 @@
         <h1>Générateur de citations</h1>
     </header>
     <main>
-        <div class="flex-line">
+        <div class="flex_line">
 
             <!-- GOOD ROBOT -->
-            <div class="goodRobot">
-                <div class="goodInterface">
+            <div class="good_robot">
+                <div class="good_interface">
                     <h2>Good Robot</h2>
                     <p>Coucou ! Je suis un robot bienveillant. Combien de phrases veux-tu que je dise&nbsp;?</p>
-                    <div class="flex-column goodUserInputs">
-                        <label for="" class="goodLabelNbQuotes">Choisis entre 1 et 5 phrases&nbsp;:</label>
-                        <input type="number" id="usr_GoodNbQuotes" min="1" max="5" class="usr_GoodNbQuotes">
-                        <label for="" id="goodErrorNbQuotes" class="goodErrorNbQuotes">Choisis un nombre entre 1 et 5</label>
-                        <button id="btn_GoodQuotes" class="btn_GoodQuotes">Générer des phrases</button>
+                    <div class="flex_column">
+                        <label for="" class="good_quotesnumber_label">Choisis entre 1 et 5 phrases&nbsp;:</label>
+                        <input type="number" id="goodQuotesNumberInput" min="1" max="5" class="good_quotesnumber_input">
+                        <label for="" id="goodError" class="goodError">Choisis un nombre entre 1 et 5</label>
+                        <button id="goodQuotesBtn" class="good_quotesbtn">Générer des phrases</button>
                     </div>
                 </div>
-                <div id="div_GoodQuotes" class="">
+                <div id="goodQuotesDiv" class="">
                     <!-- Les citations devraient s'afficher ici -->
                 </div>
             </div>
 
             <!-- EVIL ROBOT -->
-            <div class="evilRobot">
-                <div class="evilInterface">
+            <div class="evil_robot">
+                <div class="evil_interface">
                     <h2>Evil Robot</h2>
                     <p>Mouahaha ! Je suis un robot malveillant. Combien de phrases veux-tu que je dise&nbsp;?</p>
-                    <div class="flex-column evilUserInputs">
+                    <div class="flex_column">
                         <label for="" class="evilLabelNbQuotes">Choisis entre 1 et 5 phrases&nbsp;:</label>
                         <input type="number" id="usr_EvilNbQuotes" min="1" max="5" class="evilInputNbQuotes">
-                        <label for="" class="evilErrorNbQuotes">Choisis un nombre entre 1 et 5</label>
+                        <label for="" class="evilError">Choisis un nombre entre 1 et 5</label>
                         <button id="btn_EvilQuotes">Générer des phrases</button>
                     </div>
                 </div>

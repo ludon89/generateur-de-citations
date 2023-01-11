@@ -1,5 +1,5 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
     background-color: #898989;
     max-width: 1200px;
     margin-left: auto;
@@ -30,35 +30,35 @@ button {
     font-size: 0.7rem;
 }
 
-.flex-line {
+.flex_line {
     display: flex;
     flex-direction: row;
 }
 
-.flex-column {
+.flex_column {
     display: flex;
     flex-direction: column;
 }
 
 /* ================================================================= */
 
-.goodRobot {
+.good_robot {
     width: 50%;
     background-color: white;
 }
 
-.evilRobot {
+.evil_robot {
     width: 50%;
     color: white;
     background-color: #1D1D1D;
 }
 
-.goodInputNbQuotes, .evilInputNbQuotes {
+.good_quotesnumber_input, .evil_quotesnumber_input {
     justify-content: center;
     width: 90%;
 }
 
-.goodErrorNbQuotes, .evilErrorNbQuotes {
+.goodError, .evilError {
     display: none;
     color: red;
 }

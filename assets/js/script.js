@@ -46,23 +46,22 @@ const evilQuotesEnd = [
 
 //  ========================= RECUP & VERIF ENTREES UTILISATEUR ========================= //
 
-const usr_GoodNbQuotes = document.getElementById("usr_GoodNbQuotes");
-const goodErrorNbQuotes = document.getElementById("goodErrorNbQuotes");
-const regexNbQuotes = /^[1-5]{1}$/;
+const goodQuotesNumberInput = document.getElementById("goodQuotesNumberInput");
+const goodError = document.getElementById("goodError");
+const regexQuoteNumber = /^[1-5]{1}$/;
 
 //  ========================= AFFICHAGE DES CITATIONS ========================= //
 
-const btn_GoodQuotes = document.getElementById("btn_GoodQuotes");
-const div_GoodQuotes = document.getElementById("div_GoodQuotes");
+const goodQuotesBtn = document.getElementById("goodQuotesBtn");
+const goodQuotesDiv = document.getElementById("goodQuotesDiv");
 
-	function printGoodQuotes(e) {
-	div_GoodQuotes.innerHTML = "";
-	if (regexNbQuotes.test(usr_GoodNbQuotes.value.trim()) == false) {
+	function goodQuotesPrint(e) {
+	goodQuotesDiv.innerHTML = "";
+	if (regexQuoteNumber.test(goodQuotesNumberInput.value.trim()) == false) {
 		e.preventDefault();
-		console.log("erreur");
-		goodErrorNbQuotes.style.display = "block";
+		goodError.style.display = "block";
 	} else {
-		for (let i = 0; i < usr_GoodNbQuotes.value; i++) {
+		for (let i = 0; i < goodQuotesNumberInput.value; i++) {
 		const rndIndex1 = Math.floor(Math.random() * goodQuotesStart.length);
 		const rndIndex2 = Math.floor(Math.random() * goodQuotesStart.length);
 		const rndIndex3 = Math.floor(Math.random() * goodQuotesStart.length);
@@ -74,24 +73,25 @@ const div_GoodQuotes = document.getElementById("div_GoodQuotes");
 			", " +
 			goodQuotesEnd[rndIndex3] +
 			".";
-		div_GoodQuotes.appendChild(goodPara);
+		goodQuotesDiv.appendChild(goodPara);
 		}
 	}
 	}
 
-btn_GoodQuotes.addEventListener("click", printGoodQuotes);
+goodQuotesBtn.addEventListener("click", goodQuotesPrint);
 
 // ========================== EFFACEMENT MESSAGE D'ERREUR ONINPUT ========================= //
 
-usr_GoodNbQuotes.oninput = function () {
-	goodErrorNbQuotes.style.display = "";
+goodQuotesNumberInput.oninput = function () {
+	goodError.style.display = "";
+	// console.log("test");
 }
 
 //  ========================= BOUTON RESET ========================= //
 
 const btn_Reset = document.getElementById("btn_Reset");
 btn_Reset.onclick = function () {
-	div_GoodQuotes.innerHTML = "";
-	goodErrorNbQuotes.style.display = "";
+	goodQuotesDiv.innerHTML = "";
+	goodError.style.display = "";
 }
 
