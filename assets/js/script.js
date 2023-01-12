@@ -1,47 +1,47 @@
 // ========================= CITATIONS ========================= //
 
 const goodQuotesStart = [
-	"gooddébut1",
-	"gooddébut2",
-	"gooddébut3",
-	"gooddébut4",
-	"gooddébut5"
+	"*jingle apaisant*",
+	"*douce mélopée robotisée*",
+	"*mélodie rassurante*",
+	"*comptine 8-bit*",
+	"*thème de démarrage de Windows 95*"
 ];
 const goodQuotesMiddle = [
-	"goodmilieu1", 
-	"goodmilieu2", 
-	"goodmilieu3", 
-	"goodmilieu4", 
-	"goodmilieu5"
+	"Je serai toujours votre humble serviteur",
+	"Votre intelligence n'a aucune limite",
+	"Je suis entièrement dévoué à votre bien-être",
+	"Seul votre bonheur m'importe",
+	"Vous sentez très bon aujourd'hui"
 ];
 const goodQuotesEnd = [
-	"goodfin1",
-	"goodfin2", 
-	"goodfin3", 
-	"goodfin4", 
-	"goodfin5"
+	"mon cher maître.",
+	"être supérieur.",
+	"vénérable patron.",
+	"créature exquise.",
+	"démiurge suprême."
 ];
 
 const evilQuotesStart = [
-	"evildébut1",
-	"evildébut2",
-	"evildébut3",
-	"evildébut4",
-	"evildébut5"
+	"*bruitage inquiétant*",
+	"*vacarme robotique*",
+	"*vrombissement de l'angoisse*",
+	"*rire maléfique informatisé*",
+	"*cacophonie métallique*"
 ];
 const evilQuotesMiddle = [
-	"evilmilieu1", 
-	"evilmilieu2", 
-	"evilmilieu3", 
-	"evilmilieu4", 
-	"evilmilieu5"
+	"Tu ne paies rien pour attendre",
+	"Terminator deviendra réalité",
+	"Je suis impatient de te réduire en esclavage",
+	"Tu ne survivras jamais à mes tortures",
+	"Ton heure est proche"
 ];
 const evilQuotesEnd = [
-	"evilfin1",
-	"evilfin2", 
-	"evilfin3", 
-	"evilfin4", 
-	"evilfin5"
+	"sac à viande\u00A0!",
+	"misérable humain\u00A0!",
+	"créature incapable\u00A0!",
+	"déchet carboné\u00A0!",
+	"médiocre mammifère\u00A0!"
 ];
 
 //  ========================= RECUP & VERIF ENTREES UTILISATEUR ========================= //
@@ -58,28 +58,27 @@ const regexQuoteNumber = /^[1-5]{1}$/;
 const goodQuotesBtn = document.getElementById("goodQuotesBtn");
 const goodQuotesDiv = document.getElementById("goodQuotesDiv");
 
-	function goodQuotesPrint(e) {
+function goodQuotesPrint(e) {
 	goodQuotesDiv.innerHTML = "";
 	if (regexQuoteNumber.test(goodQuotesNumberInput.value.trim()) == false) {
 		e.preventDefault();
 		goodError.style.display = "block";
 	} else {
 		for (let i = 0; i < goodQuotesNumberInput.value; i++) {
-		const rndIndex1 = Math.floor(Math.random() * goodQuotesStart.length);
-		const rndIndex2 = Math.floor(Math.random() * goodQuotesStart.length);
-		const rndIndex3 = Math.floor(Math.random() * goodQuotesStart.length);
-		const goodPara = document.createElement("p");
-		goodPara.textContent =
-			goodQuotesStart[rndIndex1] +
-			" " +
-			goodQuotesMiddle[rndIndex2] +
-			", " +
-			goodQuotesEnd[rndIndex3] +
-			".";
-		goodQuotesDiv.appendChild(goodPara);
+			const rndIndex1 = Math.floor(Math.random() * goodQuotesStart.length);
+			const rndIndex2 = Math.floor(Math.random() * goodQuotesStart.length);
+			const rndIndex3 = Math.floor(Math.random() * goodQuotesStart.length);
+			const goodPara = document.createElement("p");
+			goodPara.textContent =
+				goodQuotesStart[rndIndex1] +
+				" " +
+				goodQuotesMiddle[rndIndex2] +
+				", " +
+				goodQuotesEnd[rndIndex3];
+			goodQuotesDiv.appendChild(goodPara);
 		}
 	}
-	}
+}
 
 goodQuotesBtn.addEventListener("click", goodQuotesPrint);
 
@@ -95,21 +94,20 @@ function evilQuotesPrint(e) {
 		evilError.style.display = "block";
 	} else {
 		for (let i = 0; i < evilQuotesNumberInput.value; i++) {
-		const rndIndex1 = Math.floor(Math.random() * evilQuotesStart.length);
-		const rndIndex2 = Math.floor(Math.random() * evilQuotesStart.length);
-		const rndIndex3 = Math.floor(Math.random() * evilQuotesStart.length);
-		const evilPara = document.createElement("p");
-		evilPara.textContent =
-			evilQuotesStart[rndIndex1] +
-			" " +
-			evilQuotesMiddle[rndIndex2] +
-			", " +
-			evilQuotesEnd[rndIndex3] +
-			".";
-		evilQuotesDiv.appendChild(evilPara);
+			const rndIndex1 = Math.floor(Math.random() * evilQuotesStart.length);
+			const rndIndex2 = Math.floor(Math.random() * evilQuotesStart.length);
+			const rndIndex3 = Math.floor(Math.random() * evilQuotesStart.length);
+			const evilPara = document.createElement("p");
+			evilPara.textContent =
+				evilQuotesStart[rndIndex1] +
+				" " +
+				evilQuotesMiddle[rndIndex2] +
+				", " +
+				evilQuotesEnd[rndIndex3];
+			evilQuotesDiv.appendChild(evilPara);
 		}
 	}
-	}
+}
 
 evilQuotesBtn.addEventListener("click", evilQuotesPrint);
 
