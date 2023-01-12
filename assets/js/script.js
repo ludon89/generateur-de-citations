@@ -43,7 +43,6 @@ const evilQuotesEnd = [
 	"déchet carboné\u00A0!",
 	"médiocre mammifère\u00A0!"
 ];
-
 //  ========================= RECUP & VERIF ENTREES UTILISATEUR ========================= //
 
 const goodQuotesNumberInput = document.getElementById("goodQuotesNumberInput");

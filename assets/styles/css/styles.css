@@ -10,24 +10,27 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     line-height: 1.3em;
+    font-weight: 500;
 }
 
 h2 {
     font-size: 1.1rem;
     text-align: center;
     line-height: 1.3em;
+    font-weight: 500;
 }
 
-p {
-    font-size: 0.7rem;
+p, input, button {
+    font-size: 0.75rem;
+}
+
+button {
+    max-width: 200px;
 }
 
 label {
     font-size: 0.6rem;
-}
-
-button {
-    font-size: 0.7rem;
+    margin-bottom: 0;
 }
 
 .flex_line {
@@ -45,20 +48,35 @@ button {
 .good_robot {
     width: 50%;
     background-color: white;
+    max-width: 600px;
+    padding: 0.5rem;
 }
 
 .evil_robot {
     width: 50%;
     color: white;
     background-color: #1D1D1D;
+    max-width: 600px;
+}
+
+.good_interface {
+    max-width: 500px;
+    margin: auto;
 }
 
 .good_quotesnumber_input, .evil_quotesnumber_input {
-    justify-content: center;
-    width: 90%;
+    max-width: 100px;
+}
+
+.good_quotesbtn {
+    margin-top: 2rem;
 }
 
 .good_error, .evil_error {
     display: none;
     color: red;
+}
+
+.good_quotesdiv {
+    margin-top: 1rem;
 }

@@ -30,15 +30,13 @@
                 <div class="good_interface">
                     <h2>Good Robot</h2>
                     <p>Coucou ! Je suis un robot bienveillant. Combien de phrases veux-tu que je dise&nbsp;?</p>
-                    <div class="flex_column">
+                    <div class="flex_column"> <!-- user input -->
                         <label for="" class="good_quotesnumber_label">Choisis entre 1 et 5 phrases&nbsp;:</label>
                         <input type="number" id="goodQuotesNumberInput" min="1" max="5" class="good_quotesnumber_input">
                         <label for="" id="goodError" class="good_error">Choisis un nombre entre 1 et 5</label>
                         <button id="goodQuotesBtn" class="good_quotesbtn">Générer des phrases</button>
                     </div>
-                </div>
-                <div id="goodQuotesDiv" class="">
-                    <!-- Les citations devraient s'afficher ici -->
+                    <div id="goodQuotesDiv" class="good_quotesdiv"></div> <!-- Div d'affichage des citations -->
                 </div>
             </div>
 
@@ -53,10 +51,8 @@
                         <label for="" id="evilError" class="evil_error">Choisis un nombre entre 1 et 5</label>
                         <button id="evilQuotesBtn">Générer des phrases</button>
                     </div>
+                    <div id="evilQuotesDiv" class=""></div> <!-- Div d'affichage des citations -->
                 </div>
-                <div id="evilQuotesDiv" class="">
-                </div>
-
             </div>
         </div>
         <div class="">
