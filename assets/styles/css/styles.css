@@ -24,18 +24,30 @@ p, input, button {
     font-size: 0.75rem;
 }
 
-button {
-    max-width: 200px;
-}
-
 label {
     font-size: 0.6rem;
     margin-bottom: 0;
 }
 
+@media only screen and (min-width: 600px) {
+    h1 {font-size: 2rem;}
+    h2 {font-size: 1.5rem;}
+    p, input, button {font-size: 1rem;}
+    label {font-size: 0.8rem;}
+}
+
+button {
+    max-width: 250px;
+}
+
 .flex_line {
     display: flex;
     flex-direction: row;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
 }
 
 .flex_column {
@@ -57,9 +69,10 @@ label {
     color: white;
     background-color: #1D1D1D;
     max-width: 600px;
+    padding: 0.5rem;
 }
 
-.good_interface {
+.good_interface, .evil_interface {
     max-width: 500px;
     margin: auto;
 }
@@ -68,7 +81,17 @@ label {
     max-width: 100px;
 }
 
-.good_quotesbtn {
+.good_quotesnumber_error, .evil_quotesnumber_error {
+
+}
+
+/*  
+    border: solid;
+    border-color: red;
+    border-width: 1px; 
+*/
+
+.good_quotesbtn, .evil_quotesbtn {
     margin-top: 2rem;
 }
 
@@ -77,6 +100,12 @@ label {
     color: red;
 }
 
-.good_quotesdiv {
+.good_quotesdiv, .evil_quotesdiv {
     margin-top: 1rem;
 }
+
+.reset_btn {
+    width: 400px;
+    margin: 1rem;
+}
+

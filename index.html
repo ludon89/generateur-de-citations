@@ -7,63 +7,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Générateur de citations</title>
 
-<!-- ========================= Bootstrap Reboot ========================= -->
+    <!-- ========================= Bootstrap Reboot ========================= -->
     <link rel="stylesheet" href="assets/styles/bootstrap/bootstrap-reboot.min.css">
 
-<!-- ========================= Google Fonts ========================= -->
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- ========================= Google Fonts ========================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
-<!-- ========================= CSS ========================= -->
+    <!-- ========================= CSS ========================= -->
     <link rel="stylesheet" href="assets/styles/css/styles.css">
 
 </head>
 
 <body>
     <header>
-        <h1>Générateur de citations</h1>
+        <h1>Générateur de citations aléatoires</h1>
     </header>
     <main>
         <div class="flex_line">
-
             <!-- GOOD ROBOT -->
             <div class="good_robot">
                 <div class="good_interface">
                     <h2>Good Robot</h2>
-                    <p>Coucou ! Je suis un robot bienveillant. Combien de phrases veux-tu que je dise&nbsp;?</p>
+                    <p>Bonjour ! Je suis un robot bienveillant. Combien de phrases veux-tu que je dise&nbsp;?</p>
                     <div class="flex_column"> <!-- user input -->
-                        <label for="" class="good_quotesnumber_label">Choisis entre 1 et 5 phrases&nbsp;:</label>
-                        <input type="number" id="goodQuotesNumberInput" min="1" max="5" class="good_quotesnumber_input">
-                        <label for="" id="goodError" class="good_error">Choisis un nombre entre 1 et 5</label>
+                        <label class="good_quotesnumber_label">Choisis entre 1 et 5 phrases&nbsp;:</label>
+                        <input type="number" id="goodQuotesNumberInput" min="1" max="5" class="good_quotesnumber_input good_quotesnumber_error">
+                        <label id="goodError" class="good_error">Choisis un nombre entre 1 et 5</label>
+                    </div>
+                    <div class="flex_center"> <!-- générateur de citations -->
                         <button id="goodQuotesBtn" class="good_quotesbtn">Générer des phrases</button>
                     </div>
                     <div id="goodQuotesDiv" class="good_quotesdiv"></div> <!-- Div d'affichage des citations -->
                 </div>
             </div>
-
             <!-- EVIL ROBOT -->
             <div class="evil_robot">
                 <div class="evil_interface">
                     <h2>Evil Robot</h2>
                     <p>Mouahaha ! Je suis un robot malveillant. Combien de phrases veux-tu que je dise&nbsp;?</p>
-                    <div class="flex_column">
-                        <label for="" class="evil_quotesnumber_label">Choisis entre 1 et 5 phrases&nbsp;:</label>
-                        <input type="number" id="evilQuotesNumberInput" min="1" max="5" class="evil_quotesnumber_input">
-                        <label for="" id="evilError" class="evil_error">Choisis un nombre entre 1 et 5</label>
-                        <button id="evilQuotesBtn">Générer des phrases</button>
+                    <div class="flex_column"> <!-- user input -->
+                        <label class="evil_quotesnumber_label">Choisis entre 1 et 5 phrases&nbsp;:</label>
+                        <input type="number" id="evilQuotesNumberInput" min="1" max="5" class="evil_quotesnumber_input evil_quotesnumber_error">
+                        <label id="evilError" class="evil_error">Choisis un nombre entre 1 et 5</label>
                     </div>
-                    <div id="evilQuotesDiv" class=""></div> <!-- Div d'affichage des citations -->
+                    <div class="flex_center"> <!-- générateur de citations -->
+                        <button id="evilQuotesBtn" class="evil_quotesbtn">Générer des phrases</button>
+                    </div>
                 </div>
+                <div id="evilQuotesDiv" class="evil_quotesdiv"></div> <!-- Div d'affichage des citations -->
             </div>
         </div>
-        <div class="">
-            <button id="btn_Reset" class="btn-reset">Réinitialiser</button>
+        <div class="flex_center">
+            <button id="resetBtn" class="reset_btn">Réinitialiser</button>
         </div>
     </main>
-    
-<!-- ========================= Script Bootstrap ========================= -->
+
+    <!-- ========================= Script Bootstrap ========================= -->
     <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-    
-<!-- ========================= Script JS ========================= -->
+
+    <!-- ========================= Script JS ========================= -->
     <script src="assets/js/script.js"></script>
 
 </body>

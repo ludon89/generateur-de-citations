@@ -90,7 +90,7 @@ function evilQuotesPrint(e) {
 	evilQuotesDiv.innerHTML = "";
 	if (regexQuoteNumber.test(evilQuotesNumberInput.value.trim()) == false) {
 		e.preventDefault();
-		evilError.style.display = "block";
+		evilError.style.display = "block"; /* affichage du message d'erreur */
 	} else {
 		for (let i = 0; i < evilQuotesNumberInput.value; i++) {
 			const rndIndex1 = Math.floor(Math.random() * evilQuotesStart.length);
@@ -122,8 +122,8 @@ evilQuotesNumberInput.oninput = function () {
 
 //  ========================= BOUTON RESET ========================= //
 
-const btn_Reset = document.getElementById("btn_Reset");
-btn_Reset.onclick = function () {
+const resetBtn = document.getElementById("resetBtn");
+resetBtn.onclick = function () {
 	goodQuotesDiv.innerHTML = "";
 	goodError.style.display = "";
 	evilQuotesDiv.innerHTML = "";
